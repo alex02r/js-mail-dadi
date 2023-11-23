@@ -28,3 +28,15 @@ Buon lavoro e buon divertimento! :faccia_leggermente_sorridente:
         4.a.1 - visualizziamo il messaggio "Email presente"
 3 - finisce il ciclo for
 
+**Gioco dei dadi**
+1 - dichiariamo una variabile punteggio
+2 - facciamo scegliere all'utente quanti round giocare
+3 - Avviamo un ciclo for
+    4 - generiamo il numero dell'utente da 1 a 6
+    4 - generiamo il numero del computer da 1 a 6
+    5a - ? numero utente > numero computer
+        6 - punteggio += 
+        7 - Stampiamo "Hai vinto il round "i""
+    5b - : stampiamo "Hai perso il round "i""
+3 - chiudiamo il ciclo for
+4 - stampiamo il punteggio
