@@ -34,8 +34,16 @@ let play = document.getElementById("play");
 
 play.addEventListener('click', function(){
 
+    let round_form = document.getElementById("round-form");
+    round_form.classList.add("d-none");
+
+    let game = document.getElementById("game");
+    game.classList.remove("d-none");
+    game.classList.add("d-block");
+
     let score = 0;
     let rounds = document.getElementById("rounds").value;
+    
     
     for(i=1; i <= rounds; i++){
         let number_pc = Math.floor(Math.random()* (6 - 1) + 1);
