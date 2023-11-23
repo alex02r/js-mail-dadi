@@ -34,7 +34,7 @@ let play = document.getElementById("play");
 
 play.addEventListener('click', function(){
 
-    let round_form = document.getElementById("round-form");
+    let round_form = document.getElementById("col-8");
     round_form.classList.add("d-none");
 
     let game = document.getElementById("game");
@@ -56,13 +56,14 @@ play.addEventListener('click', function(){
             score += 1;
             //messaggio nell html che abbiamo bitno il round n "i"
             mex_round = `<li><span class="text-warning"> WINN !!!!</span> Complimenti hai vinto il round ${i}</li>`;
-            list.innerHTML(mex_round);
+            list.innerHTML += mex_round;
         }else{
             //messaggio che abbiamo perso il round n "i"
             mex_round = `<li><span class="text-danger"> Lose... !!</span> Mi dispiace hai perso  il round ${i}</li>`;
-            list.innerHTML(mex_round);
+            list.innerHTML += mex_round;
         }
     }
    //messaggio punteggio totale
-   let area = area.innerHTML(`<p> Il tuo punteggio totale è di ${score} . <br>Hai vinto ${score} round su ${rounds}`);
+   let area = document.getElementById("message");
+   area.innerHTML = `<p> Il tuo punteggio totale è di ${score} . <br>Hai vinto ${score} round su ${rounds}`;
 });
