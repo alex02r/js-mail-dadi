@@ -6,15 +6,17 @@ let accedi = document.getElementById('accedi');
 
 let flag = false;
 
-
-for (let i = 0; i < emails.length; i++) {
+accedi.addEventListener('click', function( ){
+    for (let i = 0; i < emails.length; i++) {
     
-    if(email == emails[i]){
-        console.log('La tua email è presente');
-        flag = true;
+        if(email == emails[i]){
+            console.log('La tua email è presente');
+            flag = true;
+        }
     }
-}
+    
+    if(!flag){
+        console.log('L\'email che hai inserito non è presente');
+    }
+})
 
-if(!flag){
-    console.log('L\'email che hai inserito non è presente');
-}
