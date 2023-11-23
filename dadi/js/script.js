@@ -5,3 +5,6 @@ let score = 0;
 let rounds = parseInt(prompt('Inserisci quanti round vuoi giocare'));
 
 //ciclo for per far giocare i round scelti in precedenza
+for(i=0; i <= rounds; i++){
+    
+}
