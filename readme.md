@@ -19,3 +19,12 @@ Consigli del giorno:
 4. torniamo a scrivere in italiano
 5. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 Buon lavoro e buon divertimento! :faccia_leggermente_sorridente:
+
+**Mail**
+1 - Inizializziamo un array contenente delle email
+2 - Chiediamo all'utente di far inserire la sua email
+3 - facciamo un ciclo for che legge l'array
+    4.a - ? l'email inserita == email contenuta in posizione i
+        4.a.1 - visualizziamo il messaggio "Email presente"
+3 - finisce il ciclo for
+
