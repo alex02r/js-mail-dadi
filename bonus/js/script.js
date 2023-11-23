@@ -44,18 +44,25 @@ play.addEventListener('click', function(){
     let score = 0;
     let rounds = document.getElementById("rounds").value;
     
-    
+
+    let list = document.getElementById("list");
     for(i=1; i <= rounds; i++){
         let number_pc = Math.floor(Math.random()* (6 - 1) + 1);
         let number_user = Math.floor(Math.random()* (6 - 1) + 1);
 
+        let mex_round;
+
         if(number_user > number_pc){
             score += 1;
             //messaggio nell html che abbiamo bitno il round n "i"
-    
+            mex_round = `<li><span class="text-warning"> WINN !!!!</span> Complimenti hai vinto il round ${i}</li>`;
+            list.innerHTML(mex_round);
         }else{
             //messaggio che abbiamo perso il round n "i"
+            mex_round = `<li><span class="text-danger"> Lose... !!</span> Mi dispiace hai perso  il round ${i}</li>`;
+            list.innerHTML(mex_round);
         }
     }
    //messaggio punteggio totale
+   let area = area.innerHTML(`<p> Il tuo punteggio totale è di ${score} . <br>Hai vinto ${score} round su ${rounds}`);
 });
