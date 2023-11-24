@@ -55,15 +55,28 @@ play.addEventListener('click', function(){
         if(number_user > number_pc){
             score += 1;
             //messaggio nell html che abbiamo bitno il round n "i"
-            mex_round = `<li><span class="text-warning"> WINN !!!!</span> Complimenti hai vinto il round ${i}</li>`;
+            mex_round = `<li><span class="text-warning"> WINN !!!!</span> Round ${i}</li>`;
             list.innerHTML += mex_round;
         }else{
             //messaggio che abbiamo perso il round n "i"
-            mex_round = `<li><span class="text-danger"> Lose... !!</span> Mi dispiace hai perso  il round ${i}</li>`;
+            mex_round = `<li><span class="text-danger"> Lose... !!</span> Round ${i}</li>`;
             list.innerHTML += mex_round;
         }
     }
-   //messaggio punteggio totale
-   let area = document.getElementById("message");
-   area.innerHTML = `<p> Il tuo punteggio totale è di ${score} . <br>Hai vinto ${score} round su ${rounds}`;
+
+    //controllo del punteggio 
+    let win = (rounds / 2) + 1;
+
+    let area = document.getElementById("message");
+
+    if(score >= win){
+        //hai vinto
+        //messaggio punteggio totale
+        area.innerHTML = `<p> Complimanti! <span class="text-warning">Hai vinto!!</span> con ${score} punti. <br>Hai vinto ${score} round su ${rounds}</p>`;
+    }else{
+        //hai perso
+        area.innerHTML = `<p> Mi dispiace! <span class="text-danger">Hai perso...</span> con ${score} punti. <br>Hai vinto solo ${score} round su ${rounds}</p>`;
+    }
+    
+   
 });
