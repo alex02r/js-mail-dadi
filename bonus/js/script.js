@@ -77,6 +77,6 @@ play.addEventListener('click', function(){
         //hai perso
         area.innerHTML = `<p> Mi dispiace! <span class="text-danger">Hai perso...</span> con ${score} punti. <br>Hai vinto solo ${score} round su ${rounds}</p>`;
     }
-    
    
+    
 });
